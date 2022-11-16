@@ -1,0 +1,72 @@
+<article class="product">
+    <Product::Image
+    src={{@product.image}}
+    alt="A picture of {{@product.title}}"
+  />
+  <div class="details">
+      <h3>
+      
+        {{@product.title}}
+      
+    </h3>
+    <div class="detail brand">
+      <span>Brand:</span> {{@product.brand}}
+    </div>
+    <div class="detail occasion">
+      <span>Occasion:</span> {{@product.occasion}}
+    </div>
+    <div class="detail cost">
+      <span>Price:</span> {{@product.cost}}
+    </div>
+    <button clas="button">
+      <LinkTo @route="product" >
+    Buy Now
+  </LinkTo>
+    </button>
+  </div>
+</article>
+ {{!-- {{#each @product as |product|}}
+        <article class="product">
+    <Product::Image
+    src={{product.image}}
+    alt="A picture of {{product.title}}"
+  />
+  <div class="details">
+      <h3>
+        {{product.title}}
+    </h3>
+    <div class="detail brand">
+      <span>Brand:</span> {{product.brand}}
+    </div>
+    <div class="detail occasion">
+      <span>Occasion:</span> {{product.occasion}}
+    </div>
+  </div>
+</article>
+      {{/each}} --}}
+
+      {{!-- <article class="product">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+    <Product::Image class="card-img-top"
+    src={{@product.image}}
+    alt="A picture of {{@product.title}}"
+  />
+  <div class="card-body">
+      <h3 class="card-title">
+    
+        {{@product.title}}
+      
+    </h3>
+    <div class="detail brand">
+      <span>Brand:</span> {{@product.brand}}
+    </div>
+    <div class="detail occasion">
+      <span>Occasion:</span> {{@product.occasion}}
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</article> --}}

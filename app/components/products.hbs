@@ -1,0 +1,14 @@
+<div class="products">
+  <label>
+    <span style="color: #fff;">Search categories</span>
+     <Input @value={{this.query}} class="light" />
+  </label>
+
+  <ul class="results">
+    <Products::Filter @products={{@products}} @query={{this.query}} as |results|>
+      {{#each results as |property|}}
+        <li><Product @product={{property}} /></li>
+      {{/each}}
+    </Products::Filter>
+  </ul>
+</div>

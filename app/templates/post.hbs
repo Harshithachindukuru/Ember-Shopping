@@ -1,0 +1,24 @@
+<h3 style="color: #fff;">Create an item</h3>
+<form class="post-form" {{on "submit" this.createPost}}>
+    <div class="form-input-material">
+    <label for="title">Title</label>
+    {{input type="text" id="title" value=title}}
+    </div>
+        <div class="form-input-material">
+    <label for="brand">Brand</label>
+    {{input type="text" id="brand" value=brand}}
+    </div>
+    <div class="form-input-material">
+    <label for="occasion">Occasion</label>
+    {{input type="text" id="occasion" value=occasion}}
+    </div>
+    <div class="form-input-material">
+    <label for="cost">Price</label>
+    {{input type="text" id="cost" value=cost}}
+    </div>
+    <div class="form-input-material">
+    <label for="image">Image</label>
+    {{input type="url" id="image" value=image}}
+    </div>
+    <button type="submit">Post</button>
+</form>

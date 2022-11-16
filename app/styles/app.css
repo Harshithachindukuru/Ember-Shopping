@@ -1,0 +1,413 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Saira&display=swap'); */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    /* background-image: url(public\assets\images\background.jpg);  
+    background-size: contain;
+  background-repeat: no-repeat; */
+    background-color: black;
+        max-width: 1024px;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 15px;
+  }
+  a {
+    color:#fff;
+    text-decoration: none;
+  }
+  .menu {
+    height: 4em;
+    /* overflow: hidden; */
+    /* background-color: #3d6098; */
+    background-color: #3d5a80;
+    /* margin: 10px; */
+  }
+  .menu h1 {
+    position: relative;
+    padding: 5px 0 0 8px;
+    color: #f9f9f9;
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+  .menu a,
+.menu .links,
+.menu .sign{
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 0 15px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu a:hover,
+.menu a.active {
+  opacity: 1;
+}
+
+.menu .links {
+  padding: 0 21px;
+}
+.menu .links a {
+    position: relative;
+  }
+  .menu .sign{
+    float: right;
+    padding: 0 21px;
+   
+  }
+  .menu .sign a{
+    position: relative;
+    bottom: 5px;
+  }
+  /* .right {
+    float: right;
+  }
+  .cart{
+    background: url(../assets/images/cart.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 200px;
+  position: relative;
+  } */
+  .button {
+    padding: 10px 30px 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #00296b;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.9;
+    display: inline-block;
+  }
+  
+  .button:hover {
+    opacity: 1;
+  }
+  jumbo {
+  margin: 10px;
+    color: #fff;
+    width: 100%;
+  }
+  jumbo h2 {
+    font-size: 2.5em;
+  }
+  
+  jumbo p,
+  jumbo address {
+    margin-bottom: 30px;
+  }
+  jumbo {
+display: flex;
+/* flex-wrap: wrap; */
+  }
+  jumbo .cart img{
+    height: 300px;
+  width: 300px;
+  position: relative;
+  margin-left: 40px;
+  }
+  .products label span {
+    font-size: 140%;
+    margin: 50px auto 20px;
+    display: block;
+    text-align: center;
+    font-style: italic;
+  }
+  .product .details button{
+    padding: 10px 30px 10px;
+    color: #fff;
+    background: #00296b;
+    border-radius: 5px;
+    border: none;
+    
+  
+    display: inline-block;
+  }
+  .product .details button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .products input {
+    padding: 11px;
+    font-size: 18px;
+    width: 500px;
+    margin: 20px auto 50px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: solid 1px lightgray;
+    display: block;
+  }
+  .results {
+    margin-top: -10px;
+  }
+  
+  .results li {
+    list-style: none;
+    padding: 10px 15px;
+  }
+  .product {
+    margin-top: 15px;
+    /* background-color: #dfe2db; */
+    background-color: #e0fbfc;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .product:hover {
+    /* background-color: #f3f3f3; */
+    background-color: #bbeaec;
+  }
+  
+  .product img {
+    border-radius: 5px;
+  }
+  
+  .product .image {
+    flex-grow: 0;
+    flex-basis: 150px;
+    margin: 20px 25px;
+    text-align: center;
+  }
+  .product button.image {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    z-index: 1;
+  }
+  
+  .product button.image:focus {
+    outline: none;
+  }
+  
+  .product button.image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    margin: -20px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #016aba;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+  }
+  .product button.image:focus:after, .product button.image:hover:after {
+    opacity: 0.1;
+  }
+  
+  .product .image img {
+    max-width: 100%;
+  }
+  
+  .product .image.large {
+    margin: 30px 25px 50px 25px;
+    flex-basis: 100%;
+  }
+  
+  .product .image small {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: -15px;
+    text-align: center;
+    color: #016aba;
+  
+    /* This is needed to fix a safari clipping issue */
+    position: relative;
+  }
+  .product .image.large small {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 110%;
+  }
+  
+  .product .details {
+    flex-basis: 50%;
+    flex-grow: 2;
+    display: flex;
+    height: 150px;
+    margin: 20px 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+  
+  .product h3 {
+    flex-basis: 100%;
+  }
+  
+  .product h3 a {
+    display: inline;
+  }
+  .product .detail {
+    flex-basis: 50%;
+    font-weight: 300;
+    font-style: italic;
+    white-space: nowrap;
+  }
+  
+  .product .detail span {
+    font-weight: 400;
+    font-style: normal;
+  }
+.box{
+  /* color: #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eceffc;
+  width: 100%;
+  min-height: 100vh;
+}
+.btn {
+  padding: 8px 20px;
+  overflow: hidden;
+  color: #fff;
+  border:2px solid #00296b;
+  background-color: black;
+}
+.btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(120deg, transparent, var(--primary-color), transparent); */
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+.btn:hover {
+  background: transparent;
+  box-shadow: 0 0 20px 10px rgba(51, 152, 219, 0.5);
+  color: #fff;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109), 0 1px 1px rgba(128, 128, 128, 0.155), 0 2.1px 2.1px rgba(128, 128, 128, 0.195), 0 4.4px 4.4px rgba(128, 128, 128, 0.241), 0 12px 12px rgba(128, 128, 128, 0.35);
+}
+.login-form h1 {
+  margin: 0 0 24px 0;
+}
+.login-form .form-input-material {
+  margin: 12px 0;
+}
+.login-form .btn {
+  width: 100%;
+  margin: 18px 0 9px 0;
+}
+.grid-container {
+  margin-top: 15px;
+  /* background-color: #dfe2db; */
+  background-color: #e0fbfc;
+  padding: 20px 25px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; */
+}
+.grid-container .grid-image img {
+  /* max-width: 100%; */
+  margin: 20px 25px;
+  /* width: 40%; */
+  /* width: 100%;
+  height: auto; */
+  width:  100px;
+    height: 100px;
+    background-size: cover;
+    
+}
+.grid-container button.image:focus:after, .grid-container button.image:hover:after {
+  opacity: 0.1;
+}
+.grid-container .grid-items button{
+  padding: 10px ;
+  color: #fff;
+  background: #00296b;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+  font-weight: normal;
+  font-size:small;
+}
+.grid-container .grid-items  button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.post-form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109), 0 1px 1px rgba(128, 128, 128, 0.155), 0 2.1px 2.1px rgba(128, 128, 128, 0.195), 0 4.4px 4.4px rgba(128, 128, 128, 0.241), 0 12px 12px rgba(128, 128, 128, 0.35);
+}
+.post-form .form-input-material {
+  margin: 12px 0;
+}
+.post-form .btn {
+  width: 100%;
+  margin: 18px 0 9px 0;
+}
+
+
+  @media only screen and (max-width: 480px) {
+    .menu  .links, 
+    .menu .sign {
+        display: none;
+    }
+    jumbo .cart{
+        display: none
+    }
+    }
+    @media only screen and (max-width: 768px){
+        jumbo .cart img{
+            height: 300px;
+          width: 200px;
+          position: relative;
+          }
+          .products Input{
+            position: relative;
+          width: auto;
+          }
+    }
+    @media only screen and (max-width: 320px) {
+      .login-form {
+        padding: 30px 20px;
+      }
+      .grid-container .grid-image img {
+        /* max-width: 100%; */
+        margin: 20px 25px;
+        /* width: 40%; */
+        /* width: 100%;
+        height: auto; */
+        width:  70px;
+          height: 90px;
+          background-size: cover;
+      }
+    }

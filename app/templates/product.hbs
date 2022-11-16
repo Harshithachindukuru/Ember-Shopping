@@ -1,0 +1,33 @@
+
+ {{#each @model as |item|}}
+<div class="grid-container">
+ <div class="grid-image">
+  <img src={{item.image}}
+    alt="A picture of {{item.title}}">
+ </div>
+ <div class="grid-items">
+      <h3>{{item.title}}</h3>
+    <div class="grid-item brand">
+      <span>Brand:</span> {{item.brand}}
+    </div>
+    <div class="grid-item occasion">
+      <span>Occasion:</span> {{item.occasion}}
+    </div>
+    <div class="grid-item cost">
+      <span>Price:</span> {{item.cost}}
+    </div>
+     <button  class="button">Buy Now</button>
+    <button class="button" {{on "click" (fn this.delete item.id)}}>Delete</button>
+     <button  class="button">
+      {{#link-to "edit" item.id}}
+      Edit
+      {{/link-to}}
+      </button>
+ </div>
+</div>
+{{/each}}
+<button  style="margin-top:10px" class="button">
+    <LinkTo @route="post" >
+    Add item
+  </LinkTo>
+  </button>
