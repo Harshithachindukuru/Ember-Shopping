@@ -15,6 +15,6 @@ module('Acceptance | online shopping', function(hooks) {
     assert.dom('jumbo a.button').hasText('About Us');
     await click('jumbo a.button');
 
-    assert.equal(currentURL(), '/signin');
+    assert.equal(currentURL(), '/about');
   });
 });
